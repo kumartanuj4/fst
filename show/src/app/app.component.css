@@ -1,0 +1,30 @@
+
+.title{
+	text-align: center;
+	color: #F7F9F9;
+}
+.transbox{
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      padding: 10px;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      color: #000080;
+  }
+
+  div.transbox {
+      background-color: coral;
+      opacity: 0.8;
+      border-width:5px;  
+      border-style:initial;
+      margin-top: 8%;
+  }
+
+  .hometxt {
+  	width: 50%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 0px 0 8px 0;
+  }

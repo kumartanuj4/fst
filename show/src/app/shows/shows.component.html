@@ -1,0 +1,103 @@
+
+<div class="container-fluid">
+  <div class="row transbox">
+    <!-- <div class="col-sm-3"> -->
+        <!-- <button type="submit" (click)="previousState()" class="btn btn-success btn-arrow-left">Go back</button> -->
+        <!-- <a href="/home"><button type="submit" class="btn btn-success btn-arrow-left">Go back</button></a>
+      </div> -->
+      <div class="col-sm-12">
+           <!-- <input type="text" [(ngModel)]= "show_title" placeholder="title" style="padding: 2.5px;" /> -->
+           <input type='text' [(ngModel)]= "show_title" placeholder="Search Show" id='search-text-input' />
+           <div id='button-holder'>
+                <img src= '../../assets/sglass.png' />
+            </div>
+    </div>
+  <!-- </div> -->
+  </div>
+  </div>
+    <div class="container-fluid" style="margin-top: 0.5%;">
+      <div class=" row transbox">
+          <div class="col-sm-4" *ngFor="let show of shows | search: show_title">
+              <!-- <div class="col-sm-3 col-md-4" *ngFor="let show of shows" (click)="onSelect(show)"> -->
+            <!-- <img src="assets/{{ show.poster}}"/> -->
+            <!-- <img [src]="show.poster "> -->
+            <a routerLink="/detail/{{show._id}}">
+             <h5 style="color: bisque;"> {{show.show_title}}</h5></a>
+             <p>{{show.show_year}}</p>
+             <p>{{show.show_description}}</p>
+             <!-- <p>{{show.trailer}}</p> -->
+            
+          </div>
+          </div>
+          <br/>
+          <!-- <button onclick="myFunction()" class="btn btn-primary">Add New Show</button> -->
+          <!-- <button class="btn btn-primary">Add New Show</button> -->
+          <div class="container-fluid trans transbox">
+              <button class="btn btn-primary" data-toggle="collapse" data-target="#demo" style="justify-content: left">Add New Show</button>
+              <div id="demo" class="collapse">
+                  <form (submit) = "addShow()">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" [(ngModel)] = "show_title" name="show_title" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label>Year</label>
+                          <input type="text" [(ngModel)] = "show_year" name="show_year" class="form-control">
+                      </div>
+                     
+                      <div class="form-group">
+                          <label>Description</label>
+                          <input type="text" [(ngModel)] = "show_description" name="show_description" class="form-control">
+                      </div>
+                     
+                    
+                      <div class="form-group">
+                          <label>Poster</label>
+                          <input type="text" [(ngModel)] = "show_poster" name="show_poster" class="form-control">
+                      </div>
+                   
+                     
+                          <div class="form-group">
+                              <label>Trailer</label>
+                              <input type="text" [(ngModel)] = "show_trailer" name="show_trailer" class="form-control">
+                          </div>
+                          <input type="submit" class="btn btn-success" value="Add" onclick="location.reload()">
+                    </form>
+                </div>
+          <!-- <form (submit) = "addShow()">
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" [(ngModel)] = "show_title" name="show_title" class="form-control">
+              </div>
+              <div class="form-group">
+                  <label>Year</label>
+                  <input type="text" [(ngModel)] = "show_year" name="show_year" class="form-control">
+              </div>
+             
+              <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" [(ngModel)] = "show_description" name="show_description" class="form-control">
+              </div>
+             
+            
+              <div class="form-group">
+                  <label>Poster</label>
+                  <input type="text" [(ngModel)] = "show_poster" name="show_poster" class="form-control">
+              </div>
+           
+             
+                  <div class="form-group">
+                      <label>Trailer</label>
+                      <input type="text" [(ngModel)] = "show_trailer" name="show_trailer" class="form-control">
+                  </div>
+                  <input type="submit" class="btn btn-success" value="Add" onclick="location.reload()">
+            </form> -->
+          </div>
+      <!-- </div> -->
+
+  
+
+    <!-- <app-show-details [show]="selectedShow"></app-show-details> -->
+  
+    
+  

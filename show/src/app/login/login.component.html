@@ -1,0 +1,60 @@
+
+<div class="container-fluid">
+    <div class="transbox">
+      <!-- <div class="overlay"> -->
+        <div class="container">
+              <h1 style="color:wheat">Sign-in</h1>
+              <p>Just on step way from Holiday Trip</p>
+            
+            <!-- <div class="card"> -->
+                <!-- <h5 class="card-header">Featured</h5> -->
+                <!-- <div class="card-body"> -->
+                  <!-- <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  <form [formGroup]="loginform" novalidate (ngSubmit)="onSubmitLoginDetails(loginform.value)">
+                      <div class="container">
+                        <label for="email"><b>Email</b></label>
+                        <!-- <input type="email" placeholder="Enter Email" name="Email" required> -->
+                        <input type="text" placeholder="Email" formControlName="email" required>
+                        <div *ngFor="let validation of login_validation_messages.email">
+                        <div class="error-message" *ngIf="loginform.get('email').hasError(validation.type) && (loginform.get('email').dirty || loginform.get('email').touched)" style="color: crimson;">{{validation.message}}</div>
+                        </div>
+
+                        <label for="psw"><b>Password</b></label>
+                        <!-- <input type="password" placeholder="Enter Password" name="psw" required> -->
+                        <input type="text" placeholder="Password" formControlName="password" required>
+                        <div *ngFor="let validation of login_validation_messages.password">
+                        <div class="error-message" *ngIf="loginform.get('password').hasError(validation.type) && (loginform.get('password').dirty || loginform.get('password').touched)" style="color: crimson;">{{validation.message}}</div>
+                        </div>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                          </label>
+                        </div>
+                        <!-- <button type="submit">Login</button> -->
+                        <button class="butt" color="primary" button type="submit" [disabled]="!loginform.valid" *ngIf="loginform.valid">
+                            <a href="shows" style="text-decoration: none; color: azure; font-size: 20px;">Submit</a>
+                        </button>
+                      <!-- <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                      </div> -->
+                      </form>
+                      <div class="dv-merch-bottom">
+                          <p class="fn">Not Regeistred Yet? Signup</p>
+                        </div>
+                        <a href="/signup" class="butt">
+                          <span class="dv-content">
+                              Signup
+                          </span>
+                          <span class="dv-overlay">
+                          </span>
+                      </a>
+                      </div>
+                <!-- </div>
+              </div> -->
+      </div>
+      <!-- </div> -->
+    </div>
+  <!-- </div> -->

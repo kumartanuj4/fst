@@ -1,0 +1,23 @@
+.transbox{
+    width: auto;
+    height: auto;
+    /* margin: 0 auto; */
+    padding: 10px;
+    position: relative;
+    /* text-align: center; */
+    z-index: 1;
+    color: white;
+}
+
+div.transbox {
+    background-color: rgba(15, 9, 6, 0.735);;
+    opacity: 0.8;
+    border-width:5px;  
+    border-style:initial;
+}
+
+div.transbox2 {
+    opacity: 0.8;
+    border-width:5px;  
+    border-style:initial;
+}

@@ -1,0 +1,54 @@
+<div *ngIf="show">
+    <!-- <div class="container-fluid">
+      <div class="row transbox">
+      <div class="col-sm-2">
+          <a routerLink="/shows"><button type="submit" class="btn btn-primary btn-arrow-right">Back to shows</button></a>
+      </div>
+      <div class="col-sm-2">
+      <h3>{{ show.show_title }}</h3>
+      </div>
+      <div class="col-sm-2">
+        <h3>{{ show.show_year}}</h3>
+      </div>
+      <div class="col-sm-3">
+          <img src="assets/{{ show.show_poster}}" style="max-width:100px; max-height: 100px;"/>
+      </div>
+      <div class="col-sm-3">
+        <h4>{{show.show_description}}</h4>
+      </div>
+    </div>
+</div> -->
+<div class="container-fluid" style="padding-top:0.5%; padding-left: 1.6%; padding-right: 1.6%">
+  <div class="row" style="background-color: rgba(15, 9, 6, 0.735);">
+              <iframe width="100%" height="700"[src]= "'//www.youtube.com/embed/' + show.show_trailer|youtube" allowfullscreen></iframe>
+              <!-- <iframe frameborder="0" width="100%" height="700" [src] ="'//www.dailymotion.com/embed/video/' + show.trailer|youtube" allowfullscreen ></iframe> -->
+  </div>
+  <div class="row transbox">
+      <!-- <div class="col-sm-2">
+      <h3>{{ show.show_title }}</h3>
+      </div>
+      <div class="col-sm-2">
+        <h3>{{ show.show_year}}</h3>
+      </div>
+      <div class="col-sm-3">
+          <img src="assets/{{ show.show_poster}}" style="max-width:100px; max-height: 100px;"/>
+      </div> -->
+      <div class="col-sm-7">
+        <h4 style="line-height: 1.31; font-size: 16px; font-family: Roboto,HelveticaNeue-Light,sans-serif">{{show.show_description}}</h4>
+      </div>
+      <div class="col-sm-2">
+          <h3 style="line-height: 1.31; font-size: 16px; font-family: Roboto,HelveticaNeue-Light,sans-serif">{{ show.show_year}}</h3>
+      </div>
+
+      <div class="col-sm-3">
+          <a href="home" class="butt" style="justify-content: end;">
+              <span class="dv-content">
+                Watch Series Now
+              </span>
+              <span class="dv-overlay">
+              </span>
+          </a>
+      </div>
+  </div>
+</div>
+</div>
